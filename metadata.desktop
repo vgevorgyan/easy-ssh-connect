@@ -1,0 +1,19 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Easy SSH Connection
+Type=Service
+ServiceTypes=Plasma/Applet
+Icon=chronometer
+
+X-Plasma-API=python
+X-Plasma-MainScript=code/main.py
+X-Plasma-NotificationArea=true
+
+X-KDE-PluginInfo-Author=Vardan Gevorgyan
+X-KDE-PluginInfo-Email=vgevorgyan@vtgsoftware.com
+X-KDE-PluginInfo-Name=easy-ssh-connection
+X-KDE-PluginInfo-Version=1.2
+X-KDE-PluginInfo-Website=http://plasma.kde.org/
+X-KDE-PluginInfo-Category=Running
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
