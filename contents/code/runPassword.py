@@ -1,5 +1,5 @@
 try:
-        import pexpect
+	import pexpect
 	import sys
 	
 	command = sys.argv[1]
@@ -9,4 +9,4 @@ try:
 	child.sendline(password)
 	child.interact()
 except ImportError:
-        print "Module pexpect not found, please install pexpect package."
+	print "Module pexpect not found, please install pexpect package."

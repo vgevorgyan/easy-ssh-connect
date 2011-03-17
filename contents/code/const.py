@@ -17,3 +17,4 @@ AUTH_TYPE_PRIVATE_KEY="private_key"
 #Dialog titles
 EDIT_DIALOG="Edit SSH Connection"
 NEW_DIALOG="New SSH Connection"
+SETTINGS_DIALOG="Easy SSH Connection Settings"

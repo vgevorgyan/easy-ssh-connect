@@ -1,7 +1,5 @@
-from PyQt4.QtCore import *
+from PyQt4.Qt import SIGNAL, QObject, Qt
 from PyQt4.QtGui import *
-from PyKDE4.plasma import Plasma
-from PyKDE4 import plasmascript
 from PyKDE4.kdeui import *
 from Server import *
 
@@ -51,7 +49,7 @@ class ConnectionDialog(KDialog):
 		informationBoxLayout.addWidget(QLabel("Login:"), 3, 0)
 		informationBoxLayout.addWidget(self.login, 3, 1)
 		
-		informationBoxLayout.addWidget(QLabel("Switches:"), 4, 0)
+		informationBoxLayout.addWidget(QLabel("SSH command line:"), 4, 0)
 		informationBoxLayout.addWidget(self.switches, 4, 1)
 		
 		authenticationBox = KButtonGroup(self)

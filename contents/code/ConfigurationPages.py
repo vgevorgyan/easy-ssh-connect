@@ -1,8 +1,4 @@
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from PyKDE4.plasma import Plasma
-from PyKDE4 import plasmascript
-from PyKDE4.kdeui import *
+from PyQt4.Qt import Qt, QObject
 from ConnectionDialog import *
 
 from const import *
@@ -47,7 +43,7 @@ class ServerListPage(QWidget):
 	
 	def refreshServersList(self):
 		self.serversList.clear()
-		for name, server in self.applet.servers.iteritems():
+		for name, server in sorted(self.applet.servers.items()):
 			self.serversList.addItem(name)
 		
 	def removeServer(self):
@@ -79,6 +75,10 @@ class ServerListPage(QWidget):
 		editDialog.hostIP.setText(server.hostIP)
 		if server.authenticationType == AUTH_TYPE_PASSWORD:
 			editDialog.passCheckbox.setCheckState(Qt.Checked)
+			self.applet.openWallet()
+			passwd = self.applet.wallet.readPassword(server.name)
+			if passwd[0] == 0:
+				server.setPassword(passwd[1])
 			editDialog.password.setText(server.password)
 		elif server.authenticationType == AUTH_TYPE_PRIVATE_KEY:
 			editDialog.keyCheckbox.setCheckState(Qt.Checked)
