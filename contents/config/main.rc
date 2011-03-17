@@ -1,6 +1,0 @@
-[Servers][projects.vtgsoftwares.com]
-authentication_type=password
-host_ip=projects.vtgsoftwares.com
-login=root
-port=22
-switches=
